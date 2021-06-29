@@ -46,7 +46,7 @@ header .inner-header .logo a {
     width: 100%;
 }
 header .inner-header .logo a img {
-    height: 60px;
+    height: 100px;
 }
 header .inner-header .gnb {
     flex: 5;
@@ -79,6 +79,145 @@ header .inner-header .menu-open .lnr-menu {
     margin-left: 15px;
 }
 
+
+
+section.visual li{
+    width: 85%;
+    height: 550px;
+    margin: 0 auto;
+    /* background: blue; */
+}
+section.visual .main-img li img {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-60%);
+    margin: 230px 0;
+    /* background: orange; */
+}
+section.visual li .txt {
+    position: absolute;
+    top: 380px;
+    right: 660px;
+    /* background: red; */
+    font-size: 20px;
+    font-weight: 700;
+    color: #333333;
+    z-index: 1000;
+}
+
+/* 검색창 */
+section.visual .text-box {
+    position: absolute;
+    top: 150px;
+    left: 45%;
+    width: 300px;
+    height: 40px;
+    /* background: red; */
+    border: 2px solid #6e6d6d;
+    border-radius: 50px;
+}
+section.visual .text-box {
+    font-size: 22px;
+    padding: 0 10px;
+}
+section.visual .lnr {
+    font-size: 30px;
+    position: absolute;
+    top: 153px;
+    right: 50px;
+    margin: 6px 33%;
+}
+section.visual .sub-img li img {
+    width: 150px;
+    position: absolute;
+    left: 35%;
+    top: 150px;
+    /* background: red; */
+    z-index: 1000;
+}
+
+
+section.visual .sub-img {
+    height: 200px;
+}
+
+
+/* 지도 txt 설정 */
+
+section.visual {
+    margin-bottom: 50px;
+}
+
+section.visual li .txt span {
+    opacity: 0.6;
+    font-size: 20px;
+}
+
+/* 대덕구 */
+section.visual li .txt .span-one{
+    /* background: blue; */
+    display: block;
+    margin-left: -225px;
+    margin-top: 80px;
+    
+
+}
+
+/* 유성구 */
+section.visual li .txt .span-tw{
+    /* background: red; */
+    display: block;
+    margin-top: 50px;
+    margin-left: -450px;
+
+
+}
+
+/* 서구 */
+section.visual li .txt .span-th{
+    /* background: orange; */
+    display: block;
+    margin-left: -405px;
+    margin-top: 150px;
+    
+
+}
+
+/* 동구 */
+section.visual li .txt .span-fw{
+    /* background: aqua; */
+    display: block;
+    margin-left: -165px;
+    margin-top: -120px;
+}
+/* 중구 */
+section.visual li .txt .span-fi{
+    /* background: aqua; */
+    display: block;
+    margin-left: -275px;
+    margin-top: 20px;
+    /* background:green; */
+    z-index: 1000;
+}
+
+
+
+section.visual li a:hover {
+    
+    color: #33cc99;
+}
+
+section.search-map .search {
+    background: black;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+/* section.about : style */
+
 section.visual li{
     width: 85%;
     height: 700px;
@@ -91,7 +230,7 @@ section.visual li img {
     left: 50%;
     top: 0%;
     transform: translateX(-60%);
-    margin: 150px 0;
+    margin: px 0;
     /* background: orange; */
 }
 section.visual li .txt {
@@ -170,14 +309,13 @@ section.search-map .search {
 
 section.about {
     background: #fff;
-    padding: 80px 0;
-    margin-top: 100px;
+    /* padding: 80px 0; */
+    /* margin-top: 100px; */
+    border-top: 1px solid gray;
 }
 
 
-section .title {
-    color: #000;
-}
+
 
 
 
@@ -185,7 +323,9 @@ section .title h2 {
     font-size: 30px;
     margin-bottom: 10px;
     margin-left: 200px;
-
+    display: block;
+    margin-top: 30px;
+    
 }
 
 
@@ -199,6 +339,7 @@ section.about ul {
     width: 74%;
     /* 30px = 위아래 auto = 좌우 */
     margin: 30px auto;
+    position: relative;
 }
 
 section.about li {
@@ -206,7 +347,8 @@ section.about li {
     /* 사진이 수평정렬 안됐을 때 ( 3개인데 아래로 한개가 떨어졌을 때 ) */
     /* 3/100 해서 1장당 33.3%씩 가져간다.  */
     /* ul에 clearfix */
-    width: 33.3333%;
+    width: 31%;
+    margin-left: 1%;
 }
 
 section.about ul li a .img-box {
@@ -217,22 +359,29 @@ section.about ul li a .img-box {
 section.about ul li a .img-box img {
     /* 박스 안에 사진 크기를 맞춘다. */
     width: 100%;
-    transition: 0.7s;
+    
 }
 
-section.about ul li a:hover .img-box img {
-    transform: scale(1.2);
-}
+
+
 
 section.about ul li a .text {
     /* 텍스트 박스 */
-    padding: 25px;
+    padding: 20px;
 }
 
 section.about ul li a .text h3 {
     /* 회사소개 */
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom:3px;
+}
+
+section.about ul li .text p:nth-child(4){
+    color: black;
+}
+
+section.about ul li a .text span {
+    margin-right: 10px;
 }
 
 section.about ul li a .text p {
@@ -251,24 +400,20 @@ section.about ul li a .text p.more {
 
 }
 
-section.about ul li a .text p.more::before {
-    content: '\f30b';
-    font-family: 'Font Awesome 5 Free';
-    width: 30px;
-    height: 30px;
-    background: #ff8342;
-    border-radius: 50%;
-    font-size: 15px;
-    line-height: 30px;
+section.about ul li .cursur h3{
+    /* background: aqua; */
     display: block;
-    /* float: left;
-    margin-right: 15px; */
-
-    /* 포지션 or ploat을 걸면 자동으로 display:block */
-    position: absolute;
-
-    /* left, top 0을 주면 기준점이 없어 헤더 맨 위에 생김 */
-    /* 방지 하려면 MORE에 포지션 relative를 걸어주면 기준점이 MORE에 생김 */
     left: 0;
-    top: -2px;
+    margin-left: -150px;
+    margin-top: -410px;
+    font-size: 30px;
 }
+
+section.about ul li .cursur p em{
+    background: red;
+    display: block;
+    margin-left: 1450px;
+    margin-top: -40px;
+    font-size: 30px;
+}
+
