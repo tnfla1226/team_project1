@@ -26,6 +26,9 @@ header {
     z-index: 100;
     /* background: aqua; */
     border-bottom: 2px solid #b9b8b8;
+    position: fixed;
+    background: #fffefe;
+    z-index: 2000;
 }
 
 header .inner-header {
@@ -35,19 +38,23 @@ header .inner-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    /* background: #fff; */
 }
+
 header .inner-header .logo {
     /* background: tomato; */
     flex: 1;
 }
+
 header .inner-header .logo a {
     display: block;
     width: 100%;
 }
+
 header .inner-header .logo a img {
     height: 100px;
 }
+
 header .inner-header .gnb {
     flex: 5;
     margin-left: 20px;
@@ -56,12 +63,14 @@ header .inner-header .gnb {
     font-weight: 700;
     text-transform: uppercase;
 }
+
 header .inner-header .gnb ul {
     width: 90%;
     /* background: red; */
     display: flex;
     justify-content: space-between;
 }
+
 header .inner-header .menu-open {
     /* background: green; */
     flex: 1;
@@ -74,19 +83,29 @@ header .inner-header .menu-open {
     justify-content: flex-end;
     /* background: tomato; */
 }
+
 header .inner-header .menu-open .lnr-menu {
     font-size: 33px;
     margin-left: 15px;
 }
 
 
+/* section.visual : style */
+section.visual {
+    margin-bottom: 50px;
+    background: url("/dj-img/back-img.png") left bottom no-repeat #e7e7e7;
+    height: 100vh;
+    background-attachment: fixed;
+}
 
-section.visual li{
+/* 지도 */
+section.visual .main-img li {
     width: 85%;
-    height: 550px;
-    margin: 0 auto;
+    height: 600px;
+    margin: 0 auto 120px;
     /* background: blue; */
 }
+
 section.visual .main-img li img {
     width: 50%;
     position: absolute;
@@ -96,6 +115,60 @@ section.visual .main-img li img {
     margin: 230px 0;
     /* background: orange; */
 }
+
+/* 대덕구 */
+section.visual li .txt .span-one {
+    /* background: blue; */
+    display: block;
+    margin-left: -225px;
+    margin-top: 80px;
+
+
+}
+
+/* 유성구 */
+section.visual li .txt .span-tw {
+    /* background: red; */
+    display: block;
+    margin-top: 50px;
+    margin-left: -450px;
+
+
+}
+
+/* 서구 */
+section.visual li .txt .span-th {
+    /* background: orange; */
+    display: block;
+    margin-left: -405px;
+    margin-top: 130px;
+}
+
+/* 동구 */
+section.visual li .txt .span-fw {
+    /* background: aqua; */
+    display: block;
+    margin-left: -175px;
+    margin-top: -120px;
+}
+
+/* 중구 */
+section.visual li .txt .span-fi {
+    /* background: aqua; */
+    display: block;
+    margin-left: -275px;
+    margin-top: 20px;
+    /* background:green; */
+}
+
+
+section.search-map .search {
+    background: black;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
 section.visual li .txt {
     position: absolute;
     top: 380px;
@@ -114,14 +187,22 @@ section.visual .text-box {
     left: 45%;
     width: 300px;
     height: 40px;
-    /* background: red; */
-    border: 2px solid #6e6d6d;
+    background: rgb(116, 119, 118);
+    border: 4px solid rgb(116, 119, 118);
     border-radius: 50px;
+    color: #fff;
 }
+
+section.visual li a:hover {
+
+    color: rgb(32, 228, 153);
+}
+
 section.visual .text-box {
     font-size: 22px;
     padding: 0 10px;
 }
+
 section.visual .lnr {
     font-size: 30px;
     position: absolute;
@@ -129,110 +210,195 @@ section.visual .lnr {
     right: 50px;
     margin: 6px 33%;
 }
+
+/* 슬로건 */
 section.visual .sub-img li img {
     width: 150px;
     position: absolute;
     left: 35%;
-    top: 150px;
+    top: 60px;
     /* background: red; */
-    z-index: 1000;
 }
-
 
 section.visual .sub-img {
     height: 200px;
 }
 
 
-/* 지도 txt 설정 */
-
-section.visual {
-    margin-bottom: 50px;
+/* 코로나 현황 */
+section.visual .corona {
+    width: 450px;
+    height: 120px;
+    text-align: center;
+    border-radius: 30px;
+    position: absolute;
+    background: rgb(223, 247, 255);
+    position: absolute;
+    top: 400px;
+    right: 100px;
 }
 
-section.visual li .txt span {
-    opacity: 0.6;
+section.visual .corona-title {
+    position: absolute;
+    top: 300px;
+    right: 180px;
+    z-index: 900;
+}
+
+section.visual .corona ul {
+    list-style: none;
+    margin: 20px auto;
+}
+
+section.visual .corona li {
+    text-align: center;
+    float: left;
+    margin-left: 30px;
+}
+
+section.visual .corona li h2 {
+    font-size: 23px;
+    font-weight: 700;
+    color: #333232;
+}
+
+section.visual .corona li h3 {
     font-size: 20px;
 }
 
-/* 대덕구 */
-section.visual li .txt .span-one{
-    /* background: blue; */
-    display: block;
-    margin-left: -225px;
-    margin-top: 80px;
-    
-
+section.visual .corona-title h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #5c5656;
 }
 
-/* 유성구 */
-section.visual li .txt .span-tw{
-    /* background: red; */
-    display: block;
-    margin-top: 50px;
-    margin-left: -450px;
-
-
+section.visual .corona-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 서구 */
-section.visual li .txt .span-th{
-    /* background: orange; */
-    display: block;
-    margin-left: -405px;
-    margin-top: 150px;
-    
-
+section.visual .corona .total p {
+    color: rgb(33, 23, 167);
 }
 
-/* 동구 */
-section.visual li .txt .span-fw{
-    /* background: aqua; */
-    display: block;
-    margin-left: -165px;
-    margin-top: -120px;
+section.visual .corona .clear p {
+    color: rgba(255, 81, 0, 0.904);
 }
-/* 중구 */
-section.visual li .txt .span-fi{
-    /* background: aqua; */
-    display: block;
-    margin-left: -275px;
-    margin-top: 20px;
-    /* background:green; */
-    z-index: 1000;
+
+section.visual .corona .dead p {
+    color: rgba(255, 81, 0, 0.904);
+}
+
+section.visual .corona .ing p {
+    color: rgba(255, 81, 0, 0.904);
 }
 
 
-
-section.visual li a:hover {
-    
-    color: #33cc99;
+/* 글귀 */
+section.visual .main-title h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333534;
+    ;
+    position: absolute;
+    top: 450px;
+    left: 170px;
+    animation: rise-up 1s;
 }
 
-section.search-map .search {
-    background: black;
-    width: 100%;
-    height: 100vh;
-    display: none;
+section.visual .main-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 520px;
+    left: 200px;
+    animation: rise-up2 2s;
 }
 
-/* section.about : style */
+section.visual .main-title h2 p {
+    color: rgb(32, 228, 153);
+    margin-left: 20px;
+    float: right;
+}
 
-section.visual li{
+section.visual .main-title::before {
+    content: '”';
+    font-size: 200px;
+    color: rgb(32, 228, 153);
+    position: absolute;
+    left: 600px;
+    top: 440px;
+    animation: rise-up3 1s;
+}
+
+section.visual .main-title::after {
+    content: '“';
+    font-size: 200px;
+    color: rgb(32, 228, 153);
+    position: absolute;
+    left: 80px;
+    top: 350px;
+    animation: rise-up3 1s;
+}
+
+@keyframes rise-up {
+    0% {
+        top: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 450px;
+        opacity: 1;
+    }
+}
+
+@keyframes rise-up2 {
+    0% {
+        top: 1000px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 520px;
+        opacity: 1;
+    }
+}
+
+@keyframes rise-up3 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+section.visual .about li {
     width: 85%;
     height: 700px;
     margin: 0 auto;
     /* background: blue; */
 }
+
 section.visual li img {
     width: 50%;
     position: absolute;
     left: 50%;
     top: 0%;
     transform: translateX(-60%);
-    margin: px 0;
+    margin: 100px 0;
     /* background: orange; */
 }
+
 section.visual li .txt {
     position: absolute;
     top: 380px;
@@ -244,91 +410,41 @@ section.visual li .txt {
     z-index: 1000;
 }
 
-/* 지도 txt 설정 */
-
 section.visual {
     margin-bottom: 50px;
 }
 
 section.visual li .txt span {
-    opacity: 0.6;
+    color: #222121;
     font-size: 20px;
 }
 
-/* 대덕구 */
-section.visual li .txt .span-one{
-    /* background: blue; */
-    display: block;
-    margin-left: -225px;
 
-}
-
-/* 유성구 */
-section.visual li .txt .span-tw{
-    /* background: red; */
-    display: block;
-    margin-top: 30px;
-    margin-left: -400px;
-
-
-}
-
-/* 서구 */
-section.visual li .txt .span-th{
-    /* background: orange; */
-    display: block;
-    margin-left: -455px;
-    margin-top: 210px;
-    
-
-}
-
-/* 동구 */
-section.visual li .txt .span-fw{
-    /* background: aqua; */
-    display: block;
-    margin-left: -165px;
-    margin-top: -150px;
-}
-
-
-section.search-map .search {
-    background: black;
-    width: 100%;
-    height: 100vh;
-    display: none;
-}
 
 /* section.about : style */
-
 section.about {
     background: #fff;
     /* padding: 80px 0; */
     /* margin-top: 100px; */
-    border-top: 1px solid gray;
+    /* border-top: 1px solid gray; */
     height: 500px;
 }
 
-
-
-
-
-
 section .title h2 {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #3a3a3a;
     margin-bottom: 10px;
-    margin-left: 200px;
+    margin-left: 250px;
     display: block;
     margin-top: 30px;
-    
-}
 
+}
 
 section .title p {
     font-size: 18px;
     color: #555;
 }
-
 
 section.about ul {
     width: 74%;
@@ -351,14 +467,57 @@ section.about ul li a .img-box {
     overflow: hidden;
     width: 400px;
     height: 250px;
+    transition: 0.5s;
+    position: relative;
 }
 
-section.about ul li a .img-box img {
+
+section.about .title ul li a .img-box img {
     /* 박스 안에 사진 크기를 맞춘다. */
     width: 100%;
     height: 100%;
-    
 }
+
+/* 애니메이션 제작 */
+
+
+section.about ul li a .img-box::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(224, 223, 223, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;    
+    transition: 0.5s;
+}
+section.about ul li a:hover .img-box::before {
+    width: 100%;
+}
+section.about ul li a .img-box::after {
+    content: '클릭시 이동합니다.';
+    font: 15px "Exo 2", sans-serif;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    color: #FFF;
+    padding: 5px 30px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.7s;
+}
+section.about ul li a:hover .img-box::after {
+    opacity: 1;
+}
+
+
+
+
+
+
 
 
 
@@ -371,10 +530,10 @@ section.about ul li a .text {
 section.about ul li a .text h3 {
     /* 회사소개 */
     font-size: 20px;
-    margin-bottom:3px;
+    margin-bottom: 3px;
 }
 
-section.about ul li .text p:nth-child(4){
+section.about ul li .text p:nth-child(4) {
     color: black;
 }
 
@@ -388,6 +547,25 @@ section.about ul li a .text p {
     margin-bottom: 10px;
 }
 
+section.about ul li a .text ul {
+    width: 390px;
+}
+
+section.about ul li a .text .hashtag3 {
+    display: flex;
+    font-size: 18px;
+    /* background: red; */
+}
+
+section.about ul li a .text .hashtag3 li {
+    margin-right: 10px;
+    padding: 0 3px;
+    text-align: center;
+    padding: 0 3px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+}
+
 section.about ul li a .text p.more {
     /* MORE */
     font-weight: 700;
@@ -398,7 +576,7 @@ section.about ul li a .text p.more {
 
 }
 
-section.about ul li .cursur h3{
+section.about ul li .cursur h3 {
     /* background: aqua; */
     display: block;
     left: 0;
@@ -407,23 +585,13 @@ section.about ul li .cursur h3{
     font-size: 30px;
 }
 
-section.about ul li .cursur p em{
+section.about ul li .cursur p em {
     /* background: red; */
     display: block;
     margin-left: 1450px;
     margin-top: -40px;
     font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 section.container ul {
@@ -456,12 +624,10 @@ section.container ul li a .img-box img {
     /* 박스 안에 사진 크기를 맞춘다. */
     width: 100%;
     height: 100%;
-    
+
 }
 
-
-
-
+/* container */
 section.container ul li a .text {
     /* 텍스트 박스 */
     padding: 20px;
@@ -470,10 +636,10 @@ section.container ul li a .text {
 section.container ul li a .text h3 {
     /* 회사소개 */
     font-size: 20px;
-    margin-bottom:3px;
+    margin-bottom: 3px;
 }
 
-section.container ul li .text p:nth-child(4){
+section.container ul li .text p:nth-child(4) {
     color: black;
 }
 
@@ -497,7 +663,7 @@ section.container ul li a .text p.more {
 
 }
 
-section.container ul li .cursur h3{
+section.container ul li .cursur h3 {
     /* background: aqua; */
     display: block;
     left: 0;
@@ -506,7 +672,7 @@ section.container ul li .cursur h3{
     font-size: 30px;
 }
 
-section.container ul li .cursur p em{
+section.container ul li .cursur p em {
     /* background: red; */
     display: block;
     margin-left: 1450px;
@@ -514,59 +680,140 @@ section.container ul li .cursur p em{
     font-size: 30px;
 }
 
-
-section .circle h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: 200px;
+section.container ul li .cursur2 h3 {
+    /* background: aqua; */
     display: block;
-    margin-top: 150px;
-    
+    left: 0;
+    margin-left: -850px;
+    margin-top: -410px;
+    font-size: 30px;
 }
 
+section.container ul li .cursur2 p em {
+    /* background: red; */
+    display: block;
+    margin-left: 780px;
+    margin-top: -40px;
+    font-size: 30px;
+}
+
+
+/* section.circle : style */
+section .circle h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #3a3a3a;
+    margin-bottom: 10px;
+    margin-left: 250px;
+    display: block;
+    margin-top: 150px;
+
+}
 
 section .circle p {
     font-size: 18px;
     color: #555;
 }
+section .circle .p1 {
+    padding: 2px 0 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+    width: 155px;
+    color: #1b1b1b;
+}
+section .circle .p2 {
+    padding: 2px 0 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+    width: 167px;
+    color: #1b1b1b;
+}
+section .circle .p3 {
+    padding: 2px 0 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+    width: 260px;
+    color: black;
+}
+section .circle .p4 {
+    padding: 2px 0 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+    width: 235px;
+    color: black;
+}
 
 
+
+/* section.job-hunting : style */
 section.job-hunting {
     margin-left: 150px;
     width: 74%;
     height: 400px;
-    border: 5px solid #33cc99;
+    border-top: 5px solid #afd6c9;
+    /* border-bottom: 5px solid #afd6c9; */
     position: relative;
     margin-left: 230px;
 }
 
 section.job-hunting .job {
-    margin-left: 170px;
+    margin-left: 230px;
 }
 
-section.job-hunting .job h2{
-    font-size: 30px;
+section.job-hunting .job h2 {
+    padding: 4px 40px 4px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #3a3a3a;
     position: absolute;
-    top: -30px;
-    left: 100px;
+    top: -40px;
+    left: 0px;
+    /* border: 5px solid #33cc99; */
     background: #fff;
-    border: 5px solid #33cc99;
+    border-radius: 50px;
 }
 
-section.job-hunting .job .text{
+section.job-hunting .job .text {
     position: absolute;
-    top: 60px;
+    top: 90px;
     font-size: 20px;
     line-height: 1.6;
 }
 
-section.job-hunting .job .text3{
+section.job-hunting .job p {
+    display: flex;
+}
+
+section.job-hunting .job .hashtag1 {
+    display: flex;
+    font-size: 18px;
+}
+
+section.job-hunting .job .hashtag1 li {
+    margin-right: 10px;
+    padding: 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+}
+
+section.job-hunting .job .text3 {
     position: absolute;
-    top: 60px;
+    top: 90px;
     font-size: 20px;
     line-height: 1.6;
 }
 
+section.job-hunting .job .hashtag2 {
+    display: flex;
+    font-size: 18px;
+}
+
+section.job-hunting .job .hashtag2 li {
+    margin-right: 10px;
+    padding: 2px 5px;
+    background: rgb(218, 216, 216);
+    border-radius: 50px;
+}
 
 section.job-hunting .job .text span {
     margin-right: 5px;
@@ -577,19 +824,21 @@ section.job-hunting .job .text3 span {
 }
 
 section.job-hunting .job .text h3 {
-    font-size: 35px;
+    font-size: 28px;
 }
 
 section.job-hunting .job .text3 h3 {
-    font-size: 35px;
+    font-size: 28px;
 }
 
 section.job-hunting .job .text p {
     color: gray;
+    font-size: 17px;
 }
 
 section.job-hunting .job .text3 p {
     color: gray;
+    font-size: 17px;
 }
 
 section.job-hunting .text2 {
@@ -610,13 +859,15 @@ section.job-hunting .text4 {
 }
 
 section.job-hunting .text2 span {
-    color: gray;
+    color: rgb(255, 136, 38);
     font-size: 18px;
+    margin-right: 8px;
 }
 
 section.job-hunting .text4 span {
-    color: gray;
+    color: rgb(255, 136, 38);
     font-size: 18px;
+    margin-right: 8px;
 }
 
 section.job-hunting .text3 {
@@ -624,34 +875,119 @@ section.job-hunting .text3 {
 }
 
 section.job-hunting .A {
-    color: black;
+    color: rgb(255, 136, 38);
     font-weight: bold;
+    margin-left: 5px;
     text-decoration: underline;
 }
 
 
+/* section.news : style */
 section.news {
     margin-top: 100px;
     margin-left: 150px;
     width: 74%;
-    height: 250px;
-    border: 5px solid #33cc99;
+    height: 200px;
+    border-top: 5px solid #afd6c9;
     position: relative;
     margin-left: 230px;
 }
 
 section.news .news-line {
-    margin-left: 150px;
-    margin-top: 25px;
+    margin-left: 230px;
+    margin-top: 40px;
     line-height: 1.5;
     font-size: 18px;
 }
 
 section.news .news-line h1 {
-    font-size: 25px;
+    padding: 4px 40px 4px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #3a3a3a;
+    background: #fff;
+    position: absolute;
+    top: -40px;
+    left: 0px;
     margin-bottom: 10px;
 }
 
 section.news .news-line span {
     margin-right: 10px;
+    color: rgb(255, 136, 38);
 }
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 200px;
+    /* background: aqua; */
+    margin-top: 50px;
+    position: relative;
+}
+
+section.foot {
+    background: rgb(152, 153, 150);
+    height: 150px;
+}
+
+section.foot2 .footer2 {
+    background: #1b1b1b;
+    height: 50px;
+    width: 100%;
+}
+
+section.foot2 ul.footer-main2 li {
+    float: left;
+    margin-left: 50px;
+    margin-top: 13px;
+    font-size: 16px;
+    color: #fff;
+}
+
+section.foot2 ul.footer-main3 li {
+    float: right;
+    margin-right: 50px;
+    margin-top: 13px;
+    font-size: 16px;
+    color: #fff;
+}
+
+section.foot2 ul a li:hover {
+    color: rgb(22, 138, 93);
+}
+
+section.foot2 ul li span {
+    color: rgb(0, 174, 255);
+}
+
+section.foot {
+    color: #fff;
+}
+
+section.foot .footer ul li {
+    margin-left: 150px;
+    padding-top: 50px;
+}
+
+section.foot .footer ul.call {
+    background: aqua;
+    display: block;
+    margin-top: -90px;
+}
+
+section.foot .footer ul.call p {
+    float: right;
+    padding-top: 20px;
+    font-size: 16px;
+    margin-right: 350px;
+    /* background: red; */
+}
+
+section.foot .footer ul.call p span {
+    color: rgb(22, 138, 93);
+    font-size: 25px;
+    font-weight: 700;
+}
+
